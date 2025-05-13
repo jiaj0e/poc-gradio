@@ -1,0 +1,81 @@
+[project]
+name = "p-ai"
+version = "0.1.0"
+description = "Add your project description here"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "fastapi>=0.115.12",
+    "uvicorn[standard]>=0.20.0,<0.30.0",
+    "pydantic>=2.0.0,<3.0.0",
+    "httpx>=0.25.0,<0.28.0",
+    "gradio>=5.29.0",
+    "google-genai>=1.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4.0",
+    "pytest>=7.0.0,<9.0.0",
+    "pytest-asyncio",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+
+test = [
+    # Test-specific dependencies if any
+]
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".env",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "scripts",
+    "tests",
+    "venv",
+    "thirdparty",
+    "local",
+]
+
+# Configure isort to keep multiple imports with aliases on the same line
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+combine-as-imports = true
+
+# Unlike Flake8, default to a complexity level of 10.
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+# pythonpath = ["src"] # Uncomment if using a src layout
