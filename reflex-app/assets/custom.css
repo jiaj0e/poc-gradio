@@ -1,0 +1,32 @@
+.chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.message {
+  padding: 1rem;
+  margin: 0.5rem auto;  /* Changed to auto for horizontal centering */
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 70%;
+  line-height: 1.5;
+  transition: all 0.2s ease;
+  display: block;      /* Added to help with centering */
+  text-align: center;  /* Center text inside messages */
+}
+
+.question {
+  margin-left: auto;
+  margin-right: auto;  /* Added for centering */
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.answer {
+  margin-left: auto;   /* Added for centering */
+  margin-right: auto;  /* Added for centering */
+  background-color: #007AFF;
+  color: white;
+}
