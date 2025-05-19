@@ -12,6 +12,7 @@ dependencies = [
     "httpx>=0.25.0,<0.28.0",
     "gradio>=5.29.0",
     "google-genai>=1.2.0",
+    "reflex>=0.7.6.post1",
 ]
 
 [project.optional-dependencies]
